@@ -1,0 +1,57 @@
+@import "../../styles//mixins";
+
+.header {
+  background-color: #ffda00;
+  &_container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    @include sm {
+      justify-content: center;
+    }
+  }
+  &_left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_menu {
+    ul {
+      display: flex;
+      li {
+        margin-right: 25px;
+        color: #0054a2;
+        cursor: pointer;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  &_logo {
+    font-weight: 900;
+    font-size: 25px;
+    margin-right: 70px;
+    color: #0054a2;
+    cursor: pointer;
+    @include sm {
+      margin-right: 0;
+    }
+  }
+  &_link {
+    height: 50px;
+    color: white;
+    a {
+      height: 50px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      background-color: #004eb7;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}

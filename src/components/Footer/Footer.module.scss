@@ -1,0 +1,40 @@
+@import "../../styles//mixins";
+.footer {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  &_container {
+    @include container;
+    @include sm {
+      max-width: 300px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &_menu {
+    ul {
+      display: flex;
+      align-items: center;
+      @include sm {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 30px 15px;
+        justify-content: space-between;
+        row-gap: 20px;
+        column-gap: 50px;
+      }
+      li {
+        margin-right: 30px;
+        @include sm {
+          margin-right: 0;
+        }
+        cursor: pointer;
+        color: #a1a1a3;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

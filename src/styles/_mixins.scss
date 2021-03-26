@@ -1,0 +1,32 @@
+@mixin container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  @include lg {
+    max-width: 966px;
+  }
+  @media screen and (max-width: 1000px) {
+    max-width: calc(100vw - 60px);
+  }
+  @include sm {
+    max-width: calc(100vw - 20px);
+  }
+}
+
+@mixin lg {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+/* tablets */
+@mixin md {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+/* phones */
+@mixin sm {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
